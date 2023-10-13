@@ -21,7 +21,7 @@ struct Node {
 class Solution{
 
 public:
-   void find(Node* root,int x,int &ans)
+    void find(Node* root,int x,int &ans)
 {
     if(root==NULL)
     {
