@@ -86,7 +86,7 @@ class Solution
 {
     public:
     //Function to find the nodes that are common in both BST. 
-    void find1(Node* root1, vector<int>&v1)
+   void find1(Node* root1, vector<int>&v1)
     {
         if(root1==NULL)
         {
