@@ -7,7 +7,7 @@ using namespace std;
 class Solution
 {
 public:
-    int largestIsland(vector<vector<int>>& grid) {
+   int largestIsland(vector<vector<int>>& grid) {
         int n = grid.size();
         int maxIslandSize = 0;
 
