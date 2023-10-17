@@ -9,31 +9,35 @@ using namespace std;
 
 class Solution{
 public:
-   void dfs(int i, int j, vector<int> adj[],
-             vector<vector<int> >& vec)
+    void dfs(int i, int j, vector<int>adj[], vector<vector<int>>&vec)
     {
-        vec[i][j] = 1;
-        for (auto it : adj[j]) {
-            if (!vec[i][it]) {
-                dfs(i, it, adj, vec);
+        vec[i][j]=1;
+        for(auto it:adj[j])
+        {
+            if(!vec[i][it]) 
+            {
+                dfs(i,it,adj,vec);
             }
         }
     }
-    vector<vector<int> >
-    transitiveClosure(int n, vector<vector<int> > graph)
+    vector<vector<int>>transitiveClosure(int n, vector<vector<int>>graph)
     {
         // code here
-        vector<int> adj[n];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (graph[i][j] == 1 && i != j) {
+        vector<int>adj[n];
+        for(int i=0;i<n;i++) 
+        {
+            for(int j=0;j<n;j++)
+            {
+                if(graph[i][j]==1 && i!=j)
+                {
                     adj[i].push_back(j);
                 }
             }
         }
-        vector<vector<int> > vec(n, vector<int>(n, 0));
-        for (int i = 0; i < n; i++) {
-            dfs(i, i, adj, vec);
+        vector<vector<int>>vec(n,vector<int>(n,0));
+        for (int i=0;i<n;i++)
+        {
+            dfs(i,i,adj,vec);
         }
         return vec;
     }
