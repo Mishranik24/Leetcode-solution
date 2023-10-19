@@ -11,7 +11,7 @@ class Solution
 	int nodeLevel(int V, vector<int> adj[], int X) 
 	{
 	    // code here
-	queue<int>q;
+	    queue<int>q;
     vector<int>vis(V,0);
     int l=0;
     q.push(0);
