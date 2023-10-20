@@ -14,16 +14,9 @@ class Solution {
         int ans=0;
         for(int i=0;i<N;i++)
         {
-            string s="";
-            s+=to_string(arr[i]);
-            int j=0;
-            while(j<s.size())
-            {
-                int p=s[j++]-'0';
-                ans+=p;
-            }
+            ans=(ans+arr[i])%3;
         }
-        if(ans%3==0)
+        if(ans==0)
         {
             return 1;
         }
