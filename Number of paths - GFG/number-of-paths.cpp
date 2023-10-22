@@ -24,13 +24,12 @@ class Solution
         // Code Here
         int N = m+n-2;
         int r = m-1;
-        long long res = 1;
+        long long res=1;
         for(int i=1;i<=r;i++)
         {
             res = (res * 1LL * (N - r +i)) % mod;
             res = (res * 1LL * power(i , mod-2)) % mod; 
         }
-
         return res;
     }
 };
