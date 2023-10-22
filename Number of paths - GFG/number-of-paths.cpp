@@ -7,7 +7,7 @@ using namespace std;
 class Solution
 {
     public:
-    #define mod 1000000007
+   #define mod 1000000007
     long long power(long long a,long n)
     {
       long res=1;
