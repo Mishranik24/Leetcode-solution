@@ -10,7 +10,7 @@ class Solution{
   public:
     int minimumNumberOfDeletions(string s) { 
         // code here
-        string s1=s;
+         string s1=s;
         reverse(s.begin(),s.end());
         int n=s.length();
         int m=s1.length();
