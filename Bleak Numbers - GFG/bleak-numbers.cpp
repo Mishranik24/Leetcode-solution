@@ -6,7 +6,7 @@ using namespace std;
 class Solution
 {
 public:
-   int countsetbits(int n)
+	int countsetbits(int n)
 	{
         int cnt=0;
         while(n)
